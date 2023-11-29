@@ -1,4 +1,4 @@
-public class MinQuad {
+public class ProvaMmq2 {
 
     public static double resolveA(double n, double somaXY, double somaX, double somaY, double somElevX){
         return (n*somaXY - somaX * somaY) / (n * somElevX - somaX * somaX);
@@ -13,13 +13,13 @@ public class MinQuad {
     }
 
     public static void main(String[] args) {
-        double xi[] = {-1,2,3};
-        double yi[] = {1,3,5};
+        double xi[] = {-2, 0, 2, 3, 5};
+        double yi[] = {6, 3, 2, 1, -6};
         double somaX = 0;
         double somaY = 0;
-        double elevX[]= new double[4];
-        double elevY[]= new double[4];
-        double multXY[] = new double[4];
+        double elevX[]= new double[5];
+        double elevY[]= new double[5];
+        double multXY[] = new double[5];
         double somaXY = 0;
         double somElevX = 0;
         double somElevY = 0;
@@ -47,6 +47,8 @@ public class MinQuad {
         b = resolveB(n, somaX, somaY, a);
 
         double result = func(a, b, 1);
+        System.out.println("valor de a: " + a);
+        System.out.println("valor de b: " + b);
         System.out.println(result);
 
     }
